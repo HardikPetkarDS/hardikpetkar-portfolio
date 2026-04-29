@@ -1,100 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hardik Petkar | Portfolio</title>
+<meta charset="UTF-8">
+<title>Hardik Petkar | Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      border-bottom: 1px solid #30363d;
-    }
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d1117;
+  color:#c9d1d9;
+  overflow-x:hidden;
+}
 
-    h1 {
-      font-size: 42px;
-      color: white;
-      margin: 0;
-    }
+body::before{
+  content:"";
+  position:fixed;
+  width:400px;
+  height:400px;
+  background: radial-gradient(circle, rgba(88,166,255,0.2), transparent);
+  top:10%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:-1;
+}
 
-    header p {
-      margin: 10px 0;
-      font-size: 18px;
-      color: #8b949e;
-    }
+header{
+  text-align:center;
+  padding:100px 20px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #58a6ff;
-      color: black;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+h1{
+  font-size:48px;
+  color:white;
+}
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+.typing{
+  margin-top:10px;
+  font-size:20px;
+  color:#58a6ff;
+  height:25px;
+}
 
-    h2 {
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      color: white;
-    }
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 22px;
+  background:#58a6ff;
+  color:black;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
 
-    .project {
-      border: 1px solid #30363d;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(88,166,255,0.5);
+}
 
-    .project:hover {
-      transform: translateY(-5px);
-      border-color: #58a6ff;
-      box-shadow: 0 0 15px rgba(88,166,255,0.3);
-    }
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
 
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
+section.show{
+  opacity:1;
+  transform:translateY(0);
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+h2{
+  color:white;
+  margin-bottom:20px;
+  border-left:4px solid #58a6ff;
+  padding-left:10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid #30363d;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #8b949e;
-    }
-  </style>
+.project{
+  background:rgba(255,255,255,0.03);
+  border:1px solid #30363d;
+  padding:20px;
+  margin:20px 0;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.project:hover{
+  transform:translateY(-8px);
+  border-color:#58a6ff;
+  box-shadow:0 0 25px rgba(88,166,255,0.3);
+}
+
+.project img{
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+a{color:#58a6ff;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#8b949e;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Hi, I'm Hardik 👋</h1>
-  <p>Data Analyst | Turning Data into Insights</p>
+  <div class="typing" id="typing"></div>
 
-  <a href="YOUR_RESUME_LINK" target="_blank" class="btn">
+  <a href="https://drive.google.com/file/d/1z7eW0VIfjtrCP7di1YILGpC-Djf7E_IC/view?usp=sharing" target="_blank" class="btn">
     📄 Download Resume
   </a>
 </header>
@@ -102,9 +127,8 @@
 <section>
   <h2>👨‍💻 About Me</h2>
   <p>
-    I am an aspiring Data Analyst passionate about transforming raw data into meaningful insights.
-    I have hands-on experience in SQL, Python, and Power BI, building dashboards and analytics solutions
-    to support data-driven decision-making.
+    I turn raw data into actionable insights using SQL, Python, and Power BI.
+    I build dashboards and analytics solutions that drive smarter decisions.
   </p>
 </section>
 
@@ -112,46 +136,42 @@
   <h2>🚀 Projects</h2>
 
   <div class="project">
-    <h3>
-      <a href="https://github.com/HardikPetkarDS/Ecommerce-Sales-Dashboard" target="_blank">
-        📊 E-Commerce Sales Dashboard
-      </a>
-    </h3>
-    <p>Power BI + SQL dashboard with KPI tracking and Pareto analysis.</p>
+    <h3><a href="https://github.com/HardikPetkarDS/Ecommerce-Sales-Dashboard" target="_blank">
+      📊 E-Commerce Dashboard
+    </a></h3>
+    <p>KPI tracking & Pareto analysis using Power BI + SQL.</p>
+    <img src="project1.png">
   </div>
 
   <div class="project">
-    <h3>
-      <a href="https://github.com/HardikPetkarDS/Automatic-Dashboard-creator" target="_blank">
-        🤖 AI Dashboard Generator
-      </a>
-    </h3>
-    <p>Automated system that converts raw data into dashboards and insights.</p>
+    <h3><a href="https://github.com/HardikPetkarDS/Automatic-Dashboard-creator" target="_blank">
+      🤖 AI Dashboard Generator
+    </a></h3>
+    <p>Automates dashboard creation from raw data.</p>
+    <img src="project2.png">
   </div>
 
   <div class="project">
-    <h3>
-      <a href="https://github.com/HardikPetkarDS/StockAnalysis" target="_blank">
-        📈 Stock Analysis
-      </a>
-    </h3>
-    <p>Python-based stock trend analysis and financial insights.</p>
+    <h3><a href="https://github.com/HardikPetkarDS/StockAnalysis" target="_blank">
+      📈 Stock Analysis
+    </a></h3>
+    <p>Stock trend analysis using Python.</p>
+    <img src="project3.png">
   </div>
 
   <div class="project">
-    <h3>
-      <a href="https://github.com/HardikPetkarDS/PLAYR" target="_blank">
-        🏏 Player Analytics
-      </a>
-    </h3>
-    <p>Sports analytics dashboard for evaluating player performance.</p>
+    <h3><a href="https://github.com/HardikPetkarDS/PLAYR" target="_blank">
+      🏏 Player Analytics
+    </a></h3>
+    <p>Sports performance insights dashboard.</p>
+    <img src="project4.png">
   </div>
 
 </section>
 
 <section>
   <h2>🛠 Skills</h2>
-  <p>Python | SQL | Power BI | Excel | Data Analysis | Visualization</p>
+  <p>Python | SQL | Power BI | Excel | Data Analysis</p>
 </section>
 
 <section>
@@ -159,7 +179,7 @@
   <p>Email: hardikpetkar826@gmail.com</p>
   <p>
     <a href="https://www.linkedin.com/in/hardik-petkar-8130bb370" target="_blank">
-      LinkedIn Profile
+      LinkedIn
     </a>
   </p>
 </section>
@@ -167,6 +187,39 @@
 <footer>
   <p>© 2026 Hardik Petkar</p>
 </footer>
+
+<script>
+const text = ["Data Analyst", "Dashboard Builder", "Python & SQL Enthusiast"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+  if(i<text.length){
+    if(!isDeleting && j<=text[i].length){
+      current=text[i].substring(0,j++);
+    }else if(isDeleting && j>=0){
+      current=text[i].substring(0,j--);
+    }
+
+    document.getElementById("typing").innerHTML=current;
+
+    if(j==text[i].length) isDeleting=true;
+    if(j==0){isDeleting=false;i++;}
+
+    setTimeout(type,80);
+  }
+}
+type();
+
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+  sections.forEach(sec=>{
+    const top=sec.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
