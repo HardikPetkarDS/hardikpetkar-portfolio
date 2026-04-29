@@ -9,26 +9,13 @@
 
 body{
   font-family: 'Segoe UI', sans-serif;
-  background: #0d1117;
+  background:#0d1117;
   color:#c9d1d9;
-  overflow-x:hidden;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  width:400px;
-  height:400px;
-  background: radial-gradient(circle, rgba(88,166,255,0.2), transparent);
-  top:10%;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:-1;
 }
 
 header{
   text-align:center;
-  padding:100px 20px;
+  padding:80px 20px;
 }
 
 h1{
@@ -38,40 +25,23 @@ h1{
 
 .typing{
   margin-top:10px;
-  font-size:20px;
   color:#58a6ff;
-  height:25px;
 }
 
 .btn{
   display:inline-block;
   margin-top:20px;
-  padding:12px 22px;
+  padding:10px 20px;
   background:#58a6ff;
   color:black;
-  border-radius:6px;
   text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 20px rgba(88,166,255,0.5);
+  border-radius:6px;
 }
 
 section{
   max-width:1000px;
   margin:auto;
-  padding:60px 20px;
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
-}
-
-section.show{
-  opacity:1;
-  transform:translateY(0);
+  padding:50px 20px;
 }
 
 h2{
@@ -82,32 +52,40 @@ h2{
 }
 
 .project{
-  background:rgba(255,255,255,0.03);
-  border:1px solid #30363d;
+  background:#161b22;
   padding:20px;
   margin:20px 0;
-  border-radius:15px;
-  transition:0.3s;
-}
-
-.project:hover{
-  transform:translateY(-8px);
-  border-color:#58a6ff;
-  box-shadow:0 0 25px rgba(88,166,255,0.3);
+  border-radius:10px;
 }
 
 .project img{
   width:100%;
-  border-radius:10px;
   margin-top:10px;
+  border-radius:10px;
 }
 
-a{color:#58a6ff;text-decoration:none;}
-a:hover{text-decoration:underline;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+.box{
+  background:#161b22;
+  padding:15px;
+  text-align:center;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.box:hover{
+  background:#21262d;
+  transform:scale(1.05);
+}
 
 footer{
   text-align:center;
-  padding:30px;
+  padding:20px;
   color:#8b949e;
 }
 </style>
@@ -117,18 +95,21 @@ footer{
 
 <header>
   <h1>Hi, I'm Hardik 👋</h1>
-  <div class="typing" id="typing"></div>
+  <p class="typing">Data Analyst | Dashboard Builder | SQL & Python</p>
 
   <a href="https://drive.google.com/file/d/1z7eW0VIfjtrCP7di1YILGpC-Djf7E_IC/view?usp=sharing" target="_blank" class="btn">
-    📄 Download Resume
+    📄 Resume
   </a>
 </header>
 
 <section>
   <h2>👨‍💻 About Me</h2>
   <p>
-    I turn raw data into actionable insights using SQL, Python, and Power BI.
-    I build dashboards and analytics solutions that drive smarter decisions.
+    I am an aspiring Data Analyst passionate about transforming raw data into meaningful insights.
+    I specialize in SQL, Python, and Power BI to build dashboards and analytics solutions.
+    <br><br>
+    I enjoy solving real-world problems using data and continuously improving my analytical thinking.
+    My goal is to work in a data-driven environment where I can contribute to impactful decision-making.
   </p>
 </section>
 
@@ -137,49 +118,80 @@ footer{
 
   <div class="project">
     <h3><a href="https://github.com/HardikPetkarDS/Ecommerce-Sales-Dashboard" target="_blank">
-      📊 E-Commerce Dashboard
+      📊 E-Commerce Sales Analytics Dashboard
     </a></h3>
-    <p>KPI tracking & Pareto analysis using Power BI + SQL.</p>
+    <p>Built using Power BI & SQL with KPI tracking and Pareto analysis.</p>
     <img src="project1.png">
   </div>
 
   <div class="project">
     <h3><a href="https://github.com/HardikPetkarDS/Automatic-Dashboard-creator" target="_blank">
-      🤖 AI Dashboard Generator
+      🤖 Automated Dashboard Generation System
     </a></h3>
-    <p>Automates dashboard creation from raw data.</p>
+    <p>Python-based system to convert raw datasets into dashboards.</p>
     <img src="project2.png">
   </div>
 
   <div class="project">
     <h3><a href="https://github.com/HardikPetkarDS/StockAnalysis" target="_blank">
-      📈 Stock Analysis
+      📈 Stock Market Analysis System
     </a></h3>
-    <p>Stock trend analysis using Python.</p>
+    <p>Analyzed stock trends using Python and data visualization.</p>
     <img src="project3.png">
   </div>
 
   <div class="project">
     <h3><a href="https://github.com/HardikPetkarDS/PLAYR" target="_blank">
-      🏏 Player Analytics
+      🏏 Player Performance Analytics Dashboard
     </a></h3>
-    <p>Sports performance insights dashboard.</p>
+    <p>Sports analytics dashboard for performance insights.</p>
     <img src="project4.png">
   </div>
 
 </section>
 
 <section>
-  <h2>🛠 Skills</h2>
-  <p>Python | SQL | Power BI | Excel | Data Analysis</p>
+  <h2>🛠 Technical Skills</h2>
+  <div class="grid">
+    <div class="box">Python</div>
+    <div class="box">SQL</div>
+    <div class="box">Power BI</div>
+    <div class="box">Excel</div>
+    <div class="box">Pandas</div>
+    <div class="box">Data Visualization</div>
+  </div>
+</section>
+
+<section>
+  <h2>🧠 Soft Skills</h2>
+  <div class="grid">
+    <div class="box">Communication</div>
+    <div class="box">Team Collaboration</div>
+    <div class="box">Problem Solving</div>
+    <div class="box">Time Management</div>
+    <div class="box">Adaptability</div>
+    <div class="box">Networking</div>
+    <div class="box">Negotiation</div>
+    <div class="box">Stakeholder Coordination</div>
+  </div>
+</section>
+
+<section>
+  <h2>🎓 Education</h2>
+  <p>
+    FinX Institute (Formerly BSE Institute)<br>
+    BSc Data Science<br>
+    Year: 2024 - 2027
+  </p>
 </section>
 
 <section>
   <h2>📫 Contact</h2>
   <p>Email: hardikpetkar826@gmail.com</p>
+  <p>Phone: +91 7208658582</p>
   <p>
     <a href="https://www.linkedin.com/in/hardik-petkar-8130bb370" target="_blank">
-      LinkedIn
+      LinkedIn Profile
     </a>
   </p>
 </section>
@@ -187,39 +199,6 @@ footer{
 <footer>
   <p>© 2026 Hardik Petkar</p>
 </footer>
-
-<script>
-const text = ["Data Analyst", "Dashboard Builder", "Python & SQL Enthusiast"];
-let i=0,j=0,current="",isDeleting=false;
-
-function type(){
-  if(i<text.length){
-    if(!isDeleting && j<=text[i].length){
-      current=text[i].substring(0,j++);
-    }else if(isDeleting && j>=0){
-      current=text[i].substring(0,j--);
-    }
-
-    document.getElementById("typing").innerHTML=current;
-
-    if(j==text[i].length) isDeleting=true;
-    if(j==0){isDeleting=false;i++;}
-
-    setTimeout(type,80);
-  }
-}
-type();
-
-const sections=document.querySelectorAll("section");
-window.addEventListener("scroll",()=>{
-  sections.forEach(sec=>{
-    const top=sec.getBoundingClientRect().top;
-    if(top<window.innerHeight-100){
-      sec.classList.add("show");
-    }
-  });
-});
-</script>
 
 </body>
 </html>
