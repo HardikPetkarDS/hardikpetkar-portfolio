@@ -6,32 +6,52 @@
 
   <style>
     body {
-      font-family: Arial;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: #0d1117;
-      color: white;
+      color: #c9d1d9;
     }
 
     header {
       text-align: center;
-      padding: 50px;
+      padding: 60px 20px;
       border-bottom: 1px solid #30363d;
     }
 
     h1 {
       font-size: 42px;
+      color: white;
       margin: 0;
+    }
+
+    header p {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #8b949e;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #58a6ff;
+      color: black;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     section {
       max-width: 900px;
       margin: auto;
-      padding: 30px;
+      padding: 40px 20px;
     }
 
     h2 {
       border-bottom: 1px solid #30363d;
       padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: white;
     }
 
     .project {
@@ -43,8 +63,9 @@
     }
 
     .project:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
       border-color: #58a6ff;
+      box-shadow: 0 0 15px rgba(88,166,255,0.3);
     }
 
     a {
@@ -61,6 +82,8 @@
       padding: 20px;
       border-top: 1px solid #30363d;
       margin-top: 30px;
+      font-size: 14px;
+      color: #8b949e;
     }
   </style>
 </head>
@@ -69,44 +92,75 @@
 
 <header>
   <h1>Hi, I'm Hardik 👋</h1>
-  <p>Aspiring Data Analyst | SQL | Python | Power BI</p>
+  <p>Data Analyst | Turning Data into Insights</p>
+
+  <a href="YOUR_RESUME_LINK" target="_blank" class="btn">
+    📄 Download Resume
+  </a>
 </header>
+
+<section>
+  <h2>👨‍💻 About Me</h2>
+  <p>
+    I am an aspiring Data Analyst passionate about transforming raw data into meaningful insights.
+    I have hands-on experience in SQL, Python, and Power BI, building dashboards and analytics solutions
+    to support data-driven decision-making.
+  </p>
+</section>
 
 <section>
   <h2>🚀 Projects</h2>
 
   <div class="project">
-    <h3><a href="https://github.com/HardikPetkarDS/Ecommerce-Sales-Dashboard">E-Commerce Sales Dashboard</a></h3>
+    <h3>
+      <a href="https://github.com/HardikPetkarDS/Ecommerce-Sales-Dashboard" target="_blank">
+        📊 E-Commerce Sales Dashboard
+      </a>
+    </h3>
     <p>Power BI + SQL dashboard with KPI tracking and Pareto analysis.</p>
   </div>
 
   <div class="project">
-    <h3><a href="https://github.com/HardikPetkarDS/Automatic-Dashboard-creator">AI Dashboard Generator</a></h3>
-    <p>Automated system that converts raw data into dashboards & insights.</p>
+    <h3>
+      <a href="https://github.com/HardikPetkarDS/Automatic-Dashboard-creator" target="_blank">
+        🤖 AI Dashboard Generator
+      </a>
+    </h3>
+    <p>Automated system that converts raw data into dashboards and insights.</p>
   </div>
 
   <div class="project">
-    <h3><a href="https://github.com/HardikPetkarDS/StockAnalysis">Stock Analysis</a></h3>
-    <p>Python-based stock trend analysis and insights.</p>
+    <h3>
+      <a href="https://github.com/HardikPetkarDS/StockAnalysis" target="_blank">
+        📈 Stock Analysis
+      </a>
+    </h3>
+    <p>Python-based stock trend analysis and financial insights.</p>
   </div>
 
   <div class="project">
-    <h3><a href="https://github.com/HardikPetkarDS/PLAYR">Player Analytics</a></h3>
-    <p>Sports analytics dashboard for player performance.</p>
+    <h3>
+      <a href="https://github.com/HardikPetkarDS/PLAYR" target="_blank">
+        🏏 Player Analytics
+      </a>
+    </h3>
+    <p>Sports analytics dashboard for evaluating player performance.</p>
   </div>
 
 </section>
 
 <section>
   <h2>🛠 Skills</h2>
-  <p>Python | SQL | Power BI | Excel | Data Analysis</p>
+  <p>Python | SQL | Power BI | Excel | Data Analysis | Visualization</p>
 </section>
 
 <section>
   <h2>📫 Contact</h2>
   <p>Email: hardikpetkar826@gmail.com</p>
   <p>
-    <a href="https://www.linkedin.com/in/hardik-petkar-8130bb370">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/hardik-petkar-8130bb370" target="_blank">
+      LinkedIn Profile
+    </a>
   </p>
 </section>
 
